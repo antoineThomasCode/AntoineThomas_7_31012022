@@ -52,4 +52,20 @@ table {
   border-spacing: 0;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+header {
+  padding-top: 50px;
+}
+
 /*# sourceMappingURL=style.css.map */
