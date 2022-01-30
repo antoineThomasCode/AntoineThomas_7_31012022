@@ -1,0 +1,40 @@
+{
+  "name": "antoinethomas_7_31012022",
+  "version": "1.0.0",
+  "description": "projet N°7 - OC - Dev React ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-dev" : "sass --watch scss/main.scss css/style.css", 
+    "sass-prod": "sass scss/main.scss css/style.css",
+    "lint": "eslint .",
+    "build": "webpack",
+    "dev": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoineThomasCode/AntoineThomas_7_31012022.git"
+  },
+  "keywords": [
+    "search",
+    "algorithm", 
+    "project 7", 
+    "OpenClassrooms"
+  ],
+  "author": "Antoine Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoineThomasCode/AntoineThomas_7_31012022/issues"
+  },
+  "homepage": "https://github.com/antoineThomasCode/AntoineThomas_7_31012022#readme",
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
