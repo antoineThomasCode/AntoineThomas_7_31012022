@@ -1,10 +1,22 @@
+import recipiceFactory from '../factories/recipiceFactory'
+import recipes from '../data/recipes';
 
+const arrayfiltered = recipes
 
-const initHomepage = (array) => {
-    const idArray = []
-    array.forEach(recipe => {
-        console.log(recipe.name)
+function diplayRecipices(recipices) {
+
+    const recipicesContainer = document.getElementById('container-recipices')
+
+    recipes.forEach(recipe => {
+        const recipeModel =  recipiceFactory(recipe)
+        const recipeCard = recipeModel.getRecipeCard()
+        recipicesContainer.appendChild(recipeCard)
     });
-    console.log(idArray)
 }
+
+
+ function initHomepage(){
+        diplayRecipices(arrayfiltered)
+    }
+
 export default initHomepage
