@@ -25,6 +25,7 @@ function recipiceFactory(data) {
         */
        // element we need to create recipe card 
         const article = document.createElement('article')
+        article.className = 'recipeCard'
         const figure = document.createElement('figure')
         const img = document.createElement('img')
         img.src = 'assets/img/recipesImg/tartiflette.jpg'
