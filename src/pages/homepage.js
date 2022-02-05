@@ -3,21 +3,33 @@ import recipes from '../data/recipes';
 import filterbySearchBar from '../utils/searchBarFilter';
 ///////////////
 // DOM elements 
-
 const searchBar = document.getElementById('search-bar')
+const containerIngredients = document.getElementById('container-ingredients')
+const containerAppliances = document.getElementById('container-appliances')
+const containerUstensils = document.getElementById('container-ustensils')
+const recipeContainer = document.getElementById('container-recipices')
 // LISTENERS
 // listen input's search Bar 
 searchBar.addEventListener("input", function(){
     clearDom()
     initHomepage()
 })
+// ARRAYS 
+let recipesFiltered = recipes
+const ingredients = []
+const appliances = []
+const ustensils = []
 // FUNCTIONS USED TO GENERATE ELEMENTS
 // clear recipeCards in DOM
 function clearDom(){
-    const recipeContainer = document.getElementById('container-recipices')
+   
     recipeContainer.innerHTML = ''
 }
-
+function clearFilters(){
+    containerIngredients.innerHTML = ""
+    containerAppliances.innerHTML = ""
+    containerUstensils.innerHTML = ""
+}
 // create recipeCards in DOM (find model in ../RecipeFactory)
 function diplayRecipes(arrayToDisplay) {
     const recipicesContainer = document.getElementById('container-recipices')
@@ -29,13 +41,15 @@ function diplayRecipes(arrayToDisplay) {
 }
 ///////////////////////////////////////
 // INIT HOMEPAGE --> called in index.js
- function initHomepage(){
+function initHomepage(){
+   
     if (searchBar.value.length < 3) {
         clearDom()
         diplayRecipes(recipes)
     } else {
-        // --> RECIPICES WHICH MATCH WITH FUNCTION FILTER -- SEARCHBAR
-        diplayRecipes(filterbySearchBar(recipes))
+        recipesFiltered = filterbySearchBar(recipes)
+        // --> DSIPLAY RECIPES WHICH MATCH WITH FUNCTION FILTER -- SEARCHBAR
+        diplayRecipes(recipesFiltered)
         
     }
 }
