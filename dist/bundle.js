@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_recipes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/recipes */ \"./src/data/recipes.js\");\n/* harmony import */ var _pages_homepage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/homepage */ \"./src/pages/homepage.js\");\n\r\n\r\n\r\n\r\n(0,_pages_homepage__WEBPACK_IMPORTED_MODULE_1__.initHomepage)()\r\n\n\n//# sourceURL=webpack://antoinethomas_7_31012022/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pages_homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/homepage */ \"./src/pages/homepage.js\");\n\r\n\r\n\r\n(0,_pages_homepage__WEBPACK_IMPORTED_MODULE_0__.initHomepage)()\r\n\n\n//# sourceURL=webpack://antoinethomas_7_31012022/./src/index.js?");
 
 /***/ }),
 
