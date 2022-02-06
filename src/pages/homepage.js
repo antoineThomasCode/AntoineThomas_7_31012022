@@ -44,17 +44,17 @@ function diplayRecipes(arrayToDisplay) {
 function createFilters () {
     appliancesList.forEach(appliance => {
         const li = document.createElement('li')
-        li.innerHTML = `${appliance} <i class="fas fa-times-circle"></i>`
+        li.innerHTML = appliance
         containerAppliances.appendChild(li)
     })
     ingredientsList.forEach(ingredient => {
         const li = document.createElement('li')
-        li.innerHTML = `${ingredient} <i class="fas fa-times-circle"></i>`
+        li.innerHTML = ingredient
         containerIngredients.appendChild(li)
     })
     ustensilsList.forEach(ustensil => {
         const li = document.createElement('li')
-        li.innerHTML = `${ustensil} <i class="fas fa-times-circle"></i>`
+        li.innerHTML = ustensil
         containerUstensils.appendChild(li)
     })
 }

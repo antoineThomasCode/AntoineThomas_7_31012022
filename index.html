@@ -22,7 +22,7 @@
     </header>
     <main>
       <div id="main-container">
-        <section id="search">
+        <section id="search" class="d-flex">
           <input
             type="search"
             id="search-bar"
@@ -33,19 +33,25 @@
         </section>
         <section id="filters" class="d-flex">
           <div>
-            <input type="text" placeholder="Ingrédients">
+            <i class="fas fa-chevron-down"></i>
+            <span>Ingrédients</span>
+            <input type="text" placeholder="Rechercher un ingredient">
             <ul id="container-ingredients" class="d-flex f-wrap">
 
             </ul>
           </div>
           <div>
-            <input type="text" placeholder="Appareils">
+            <i class="fas fa-chevron-down"></i>
+            <span>Appareils</span>
+            <input type="text" placeholder="Rechercher un appareil">
             <ul id="container-appliances" class="d-flex f-wrap">
               
             </ul>
           </div>
           <div>
-            <input type="text" placeholder="Ustensiles">
+            <i class="fas fa-chevron-down"></i>
+            <span>Ustensils</span>
+            <input type="text" placeholder="Rechercher un ustensile">
             <ul id="container-ustensils" class="d-flex f-wrap">
               
             </ul>
