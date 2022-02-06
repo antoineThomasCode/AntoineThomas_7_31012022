@@ -1,3 +1,4 @@
+import { appliances, appliancesList, ingredientsList, ustensilsList  } from "../pages/homepage";
 function recipiceFactory(data) {
     const {id, name, servings, ingredients, time, description, appliance, ustensils} = data; 
 
@@ -55,7 +56,21 @@ function recipiceFactory(data) {
         informationsContainer.append(nameTimeContainer ,infosToPrepareContainer)
         figure.appendChild(img)
         article.append(figure, informationsContainer)
-
+        // push values in filters Arrays 
+        if (appliancesList.indexOf(appliance) === -1) {
+          appliancesList.push(appliance)
+        }
+        ustensils.forEach(ustensil => {
+          if (ustensilsList.indexOf(ustensil) === -1){
+            ustensilsList.push(ustensil)
+          }
+        })
+        ingredients.forEach(ingredientSelect => {
+          if (ingredientsList.indexOf(ingredientSelect.ingredient) === -1) {
+            ingredientsList.push(ingredientSelect.ingredient)
+          }
+        })
+        
         return article 
     }
 

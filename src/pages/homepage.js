@@ -11,21 +11,22 @@ const recipeContainer = document.getElementById('container-recipices')
 // LISTENERS
 // listen input's search Bar 
 searchBar.addEventListener("input", function(){
-    clearDom()
     initHomepage()
 })
 // ARRAYS 
 let recipesFiltered = recipes
-const ingredients = []
-const appliances = []
-const ustensils = []
+let ingredientsList = []
+let appliancesList = []
+let ustensilsList = []
 // FUNCTIONS USED TO GENERATE ELEMENTS
 // clear recipeCards in DOM
-function clearDom(){
-   
+function clearCards(){
     recipeContainer.innerHTML = ''
 }
 function clearFilters(){
+    appliancesList = []
+    ingredientsList = []
+    ustensilsList = []
     containerIngredients.innerHTML = ""
     containerAppliances.innerHTML = ""
     containerUstensils.innerHTML = ""
@@ -39,19 +40,42 @@ function diplayRecipes(arrayToDisplay) {
         recipicesContainer.appendChild(recipeCard)
     });
 }
+//create filters width Lists 
+function createFilters () {
+    appliancesList.forEach(appliance => {
+        const li = document.createElement('li')
+        li.innerHTML = `${appliance} <i class="fas fa-times-circle"></i>`
+        containerAppliances.appendChild(li)
+    })
+    ingredientsList.forEach(ingredient => {
+        const li = document.createElement('li')
+        li.innerHTML = `${ingredient} <i class="fas fa-times-circle"></i>`
+        containerIngredients.appendChild(li)
+    })
+    ustensilsList.forEach(ustensil => {
+        const li = document.createElement('li')
+        li.innerHTML = `${ustensil} <i class="fas fa-times-circle"></i>`
+        containerUstensils.appendChild(li)
+    })
+}
 ///////////////////////////////////////
 // INIT HOMEPAGE --> called in index.js
 function initHomepage(){
    
     if (searchBar.value.length < 3) {
-        clearDom()
+        clearCards()
+        clearFilters()
         diplayRecipes(recipes)
+        createFilters()
     } else {
         recipesFiltered = filterbySearchBar(recipes)
+        clearFilters()
+        clearCards()
         // --> DSIPLAY RECIPES WHICH MATCH WITH FUNCTION FILTER -- SEARCHBAR
         diplayRecipes(recipesFiltered)
+        createFilters()
         
     }
 }
 
-export { initHomepage, searchBar }
+export { initHomepage, searchBar, appliancesList, ingredientsList, ustensilsList }
