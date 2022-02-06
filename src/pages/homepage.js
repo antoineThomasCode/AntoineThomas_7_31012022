@@ -8,6 +8,9 @@ const containerIngredients = document.getElementById('container-ingredients')
 const containerAppliances = document.getElementById('container-appliances')
 const containerUstensils = document.getElementById('container-ustensils')
 const recipeContainer = document.getElementById('container-recipices')
+const inputIngredientFilter = document.getElementById('ingredient-input')
+const inputApplianceFilter = document.getElementById('appliance-input')
+const inputUstensilFilter = document.getElementById('ustensil-input')
 // LISTENERS
 // listen input's search Bar 
 searchBar.addEventListener("input", function(){
@@ -18,6 +21,35 @@ let recipesFiltered = recipes
 let ingredientsList = []
 let appliancesList = []
 let ustensilsList = []
+// listen input ingredients 
+inputIngredientFilter.addEventListener('input', function(){
+    if (inputIngredientFilter.value.length >= 3) {
+        containerIngredients.innerHTML = ""
+    }
+    else {
+        initHomepage()
+    }
+})
+// Listen input appliance
+inputApplianceFilter.addEventListener('input', function(){
+    if (inputApplianceFilter.value.length >= 3) {
+        containerAppliances.innerHTML = ""
+        
+        
+    }
+    else {
+        initHomepage()
+    }
+})
+// Listen input ustensil
+inputUstensilFilter.addEventListener('input', function(){
+    if (inputUstensilFilter.value.length >= 3) {
+        containerUstensils.innerHTML = ""
+    }
+    else {
+        initHomepage()
+    }
+})
 // FUNCTIONS USED TO GENERATE ELEMENTS
 // clear recipeCards in DOM
 function clearCards(){
