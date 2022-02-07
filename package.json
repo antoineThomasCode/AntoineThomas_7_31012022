@@ -9,7 +9,8 @@
     "sass-prod": "sass scss/main.scss css/style.css",
     "lint": "eslint .",
     "build": "webpack",
-    "dev": "webpack --watch"
+    "dev": "webpack --watch",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   },
   "keywords": [
     "search",
-    "algorithm", 
+    "algorithm",
     "project 7",
     "OpenClassrooms"
   ],
@@ -36,7 +37,7 @@
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
-  }, 
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
