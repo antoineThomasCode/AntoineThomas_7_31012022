@@ -1,6 +1,6 @@
 import { appliances, appliancesList, ingredientsList, ustensilsList  } from "../pages/homepage";
 function recipiceFactory(data) {
-    const {id, name, servings, ingredients, time, description, appliance, ustensils} = data; 
+    const {id, name,image , servings, ingredients, time, description, appliance, ustensils} = data; 
 
     function getRecipeCard() {
         
@@ -29,7 +29,7 @@ function recipiceFactory(data) {
         article.className = 'recipeCard'
         const figure = document.createElement('figure')
         const img = document.createElement('img')
-        img.src = 'assets/img/recipesImg/tartiflette.jpg'
+        img.src = `assets/img/recipesImg/${image}`
         const informationsContainer = document.createElement('div')
         const nameTimeContainer = document.createElement('div')
         const h3 = document.createElement('h3')
