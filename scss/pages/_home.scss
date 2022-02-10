@@ -172,15 +172,15 @@ main {
         flex-basis: 23%;
         text-decoration: none;
         background-color: #E7E7E7;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
+        border-radius: 15px;
+        box-shadow: 15px 19px 55px 24px rgba(177, 177, 185, 0.178);
         article {
             border-radius: 15px;
             display: flex;
             flex-wrap: wrap;
             flex-basis: 100%;
             color: black;
-            box-shadow: 15px 19px 55px 24px rgba(177, 177, 185, 0.144);
+            
             figure {
                 flex-basis: 100%;
                 color: black;
