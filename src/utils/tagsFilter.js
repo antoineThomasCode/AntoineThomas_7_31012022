@@ -7,7 +7,9 @@ function filterByTags (array) {
         activesTag.forEach(tag => {
             if ( element.name.toLowerCase().includes(tag.toLowerCase()) ||
                  element.description.toLowerCase().includes(tag.toLowerCase()) ||
-                 element.ingredients.includes((ingredient) => ingredient.ingredient.toLowerCase().includes(tag.toLowerCase()))){
+                 element.ingredients.includes((ingredient) => ingredient.ingredient.toLowerCase().includes(tag.toLowerCase())) ||
+                 element.unstensils?.includes((usten) => usten.ustensils.toLowerCase().includes(tag.toLowerCase())) ||
+                element.appliance.includes(tag.toLowerCase())){
                 filteredArray.push(element)
             }
         })
