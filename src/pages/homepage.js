@@ -53,11 +53,19 @@ function clearFilters(){
 // create recipeCards in DOM (find model in ../RecipeFactory)
 function diplayRecipes(arrayToDisplay) {
     const recipicesContainer = document.getElementById('container-recipices')
-    arrayToDisplay.forEach(item => {
-        const recipeModel =  recipiceFactory(item)
-        const recipeCard = recipeModel.getRecipeCard()
-        recipicesContainer.appendChild(recipeCard)
-    });
+    if (arrayToDisplay.length === 0){
+        const errorMessage = document.createElement('p')
+        errorMessage.className = "noResultMessage"
+        errorMessage.innerHTML = `Aucune recette ne correspond à votre critère… vous pouvez
+        chercher « tarte aux pommes », « poisson », etc`
+        recipeContainer.appendChild(errorMessage)
+    } else {
+        arrayToDisplay.forEach(item => {
+            const recipeModel =  recipiceFactory(item)
+            const recipeCard = recipeModel.getRecipeCard()
+            recipicesContainer.appendChild(recipeCard)
+        })
+    }
 }
 //create filters width Lists
 const createFilters = (array, container) => {
