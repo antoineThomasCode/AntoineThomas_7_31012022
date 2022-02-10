@@ -162,6 +162,7 @@ main {
   display: flex;
   transition: width 0.3s;
   position: relative;
+  box-shadow: 15px 19px 55px 24px rgba(177, 177, 185, 0.164);
 }
 #filters div > i {
   position: absolute;
@@ -249,47 +250,55 @@ main {
   row-gap: 20px;
   column-gap: 45px;
 }
-#container-recipices article {
-  border-radius: 5px;
+#container-recipices > a {
+  display: flex;
+  flex-basis: 23%;
+  text-decoration: none;
+}
+#container-recipices > a article {
+  border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 23%;
-}
-#container-recipices article figure {
   flex-basis: 100%;
+  color: black;
+  box-shadow: 15px 19px 55px 24px rgba(177, 177, 185, 0.144);
 }
-#container-recipices article figure img {
+#container-recipices > a article figure {
+  flex-basis: 100%;
+  color: black;
+}
+#container-recipices > a article figure img {
   width: 100%;
-  height: 175px;
+  height: 185px;
   object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-#container-recipices article > div {
-  padding: 20px 10px 0 10px;
+#container-recipices > a article > div {
+  padding: 30px 30px 0 30px;
   display: flex;
   flex-wrap: wrap;
   background-color: #E7E7E7;
   height: 160px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
-#container-recipices article > div div:first-child {
+#container-recipices > a article > div div:first-child {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
   justify-content: space-between;
 }
-#container-recipices article > div div:first-child h1 {
+#container-recipices > a article > div div:first-child h1 {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
 }
-#container-recipices article > div div:nth-child(2) {
+#container-recipices > a article > div div:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-#container-recipices article > div div:nth-child(2) ul {
+#container-recipices > a article > div div:nth-child(2) ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -297,16 +306,76 @@ main {
   line-height: 14px;
   align-items: stretch;
 }
-#container-recipices article > div div:nth-child(2) ul li {
+#container-recipices > a article > div div:nth-child(2) ul li {
   font-size: 12px;
   letter-spacing: -0.1px;
 }
-#container-recipices article > div div:nth-child(2) ul li span {
+#container-recipices > a article > div div:nth-child(2) ul li span {
   font-weight: bold;
 }
-#container-recipices article > div div:nth-child(2) p {
+#container-recipices > a article > div div:nth-child(2) p {
   flex-basis: 40%;
-  font-size: 12px;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 1850px) {
+  #container-recipices > a {
+    flex-basis: 30%;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #filters > div {
+    width: 20%;
+  }
+
+  #container-recipices > a {
+    flex-basis: 45%;
+  }
+}
+@media screen and (max-width: 800px) {
+  main {
+    padding: 10px;
+  }
+
+  #filters {
+    flex-direction: column;
+    row-gap: 10px;
+    top: 120px;
+    right: 0;
+  }
+  #filters > div {
+    width: 70%;
+    height: 30px;
+    align-self: center;
+  }
+  #filters > div:hover {
+    width: 85%;
+    height: max-content;
+  }
+
+  #container-recipices {
+    margin-top: 240px;
+  }
+  #container-recipices > a {
+    flex-basis: 100%;
+    overflow: hidden;
+  }
+  #container-recipices > a article > div {
+    padding: 10px 20px 10px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  #container-recipices > a article > div > div:nth-child(2) ul {
+    display: flex;
+    flex-basis: 100%;
+  }
+  #container-recipices > a article > div > div:nth-child(2) ul li {
+    font-size: 0.7em;
+  }
+  #container-recipices > a article > div p {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

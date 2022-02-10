@@ -25,6 +25,8 @@ function recipiceFactory(data) {
           </article>
         */
        // element we need to create recipe card 
+        const recipeCard = document.createElement('a')
+        recipeCard.href = `./pages/recipe.html?id=${id}`
         const article = document.createElement('article')
         article.className = 'recipeCard'
         const figure = document.createElement('figure')
@@ -56,6 +58,7 @@ function recipiceFactory(data) {
         informationsContainer.append(nameTimeContainer ,infosToPrepareContainer)
         figure.appendChild(img)
         article.append(figure, informationsContainer)
+        recipeCard.appendChild(article)
         // push values in filters Arrays 
         if (appliancesList.indexOf(appliance) === -1) {
           appliancesList.push(appliance)
@@ -71,7 +74,7 @@ function recipiceFactory(data) {
           }
         })
         
-        return article 
+        return recipeCard
     }
 
     return {getRecipeCard}
