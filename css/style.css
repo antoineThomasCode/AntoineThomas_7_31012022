@@ -254,6 +254,7 @@ main {
   display: flex;
   flex-basis: 23%;
   text-decoration: none;
+  background-color: #E7E7E7;
 }
 #container-recipices > a article {
   border-radius: 15px;
