@@ -172,7 +172,8 @@ main {
         flex-basis: 23%;
         text-decoration: none;
         background-color: #E7E7E7;
-        
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
         article {
             border-radius: 15px;
             display: flex;
@@ -267,7 +268,7 @@ main {
     #filters {
         flex-direction: column;
         row-gap: 10px;
-        top: 120px;
+        top: 180px;
         right: 0;
         
         > div {
@@ -281,8 +282,19 @@ main {
            
         }
     }
+    #tagContainer {
+        column-gap: 10px; 
+        row-gap: 5px;
+            span {
+                padding: 5px;
+                font-size: 0.7em;
+                &::after {
+                    font-size: 1em;
+                }
+            }
+    }
     #container-recipices {
-        margin-top: 240px;
+        margin-top: 280px;
         > a {
             flex-basis: 100%;
             overflow: hidden;
