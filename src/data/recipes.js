@@ -41,7 +41,7 @@ const recipes = [
         "servings": 2,
         "ingredients": [
             {
-                "ingredient" : "Thon Rouge (ou blanc)",
+                "ingredient" : "Thon",
                 "quantity" : 200,
                 "unit" : "grammes"
             },
