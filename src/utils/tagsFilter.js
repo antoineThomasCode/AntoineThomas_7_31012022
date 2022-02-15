@@ -11,7 +11,6 @@ function filterByTags (array) {
                  element.ustensils.includes((usten) => usten.ustensils.toLowerCase().includes(tag.toLowerCase())) ||
                 element.appliance.includes(tag.toLowerCase())){
                 filteredArray.push(element)
-                console.log(element)
             }
         })
     });
